@@ -11,7 +11,7 @@ opts = Options()
 
 def iex_Rtm_import():
     # set download directory path
-    p = {'download.default_directory':r'C:\Users\dheer\Desktop\wrldc\RTM_REPORT_AUTOMATION\Dumps\iexRtmFile'}
+    p = {'download.default_directory':r'C:\Users\dheer\Desktop\wrldc\RTM_BROWSER_AUTOMATION\Dumps\iexRtmFile'}
     #add options to browser
     opts.add_experimental_option('prefs', p)
 
@@ -47,10 +47,10 @@ def iex_Rtm_import():
     # click on different download option button "ctl00_InnerContent_reportViewer_ctl05_ctl04_ctl00_ButtonLink"
     dropdownLinks[0].click()
 
-    # move all iex files from "C:\Users\dheer\Desktop\wrldc\RTM_REPORT_AUTOMATION\iexDamFile" to
-    #                           "C:\Users\dheer\Desktop\wrldc\RTM_REPORT_AUTOMATION\iexDamFile\Archives"
-    srcFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_REPORT_AUTOMATION\Dumps\iexRtmFile'
-    destFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_REPORT_AUTOMATION\Dumps\iexRtmFile\Archives'
+    # move all iex files from "C:\Users\dheer\Desktop\wrldc\RTM_BROWSER_AUTOMATION\iexDamFile" to
+    #                           "C:\Users\dheer\Desktop\wrldc\RTM_BROWSER_AUTOMATION\iexDamFile\Archives"
+    srcFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_BROWSER_AUTOMATION\Dumps\iexRtmFile'
+    destFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_BROWSER_AUTOMATION\Dumps\iexRtmFile\Archives'
     destFileName = "MarketMinute_"
     moveFilesToArchive(srcFileLocation, destFileLocation, destFileName)
 

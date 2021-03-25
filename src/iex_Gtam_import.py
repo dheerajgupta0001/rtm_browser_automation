@@ -11,7 +11,7 @@ opts = Options()
 
 def iex_Gtam_import():
     # set download directory path
-    p = {'download.default_directory':r'C:\Users\dheer\Desktop\wrldc\RTM_REPORT_AUTOMATION\Dumps\iexGtamFile'}
+    p = {'download.default_directory':r'C:\Users\dheer\Desktop\wrldc\RTM_BROWSER_AUTOMATION\Dumps\iexGtamFile'}
     #add options to browser
     opts.add_experimental_option('prefs', p)
 
@@ -43,8 +43,8 @@ def iex_Gtam_import():
     # click on different download option ctl00_InnerContent_reportViewer_ctl05_ctl04_ctl00_ButtonLink
     browser.find_elements_by_id("ctl00_InnerContent_reportViewer_ctl05_ctl04_ctl00_ButtonLink")[0].click()
 
-    srcFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_REPORT_AUTOMATION\Dumps\iexGtamFile'
-    destFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_REPORT_AUTOMATION\Dumps\iexGtamFile\Archives'
+    srcFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_BROWSER_AUTOMATION\Dumps\iexGtamFile'
+    destFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_BROWSER_AUTOMATION\Dumps\iexGtamFile\Archives'
     destFileName = "DateWiseTrade_"
     moveFilesToArchive(srcFileLocation, destFileLocation, destFileName)
     delay = 60 # seconds

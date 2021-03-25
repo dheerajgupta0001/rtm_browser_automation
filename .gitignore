@@ -9,7 +9,7 @@ __pycache__
 .mypy_cache/
 config.json
 assets/
-dumps/
+Dumps/
 *.DS_Store
 
 

@@ -14,7 +14,7 @@ opts = Options()
 
 def wbes_Rtm_iex_import():
     # set download directory path
-    p = {'download.default_directory':r'C:\Users\dheer\Desktop\wrldc\RTM_REPORT_AUTOMATION\Dumps\wbesRtmIexFile'}
+    p = {'download.default_directory':r'C:\Users\dheer\Desktop\wrldc\RTM_BROWSER_AUTOMATION\Dumps\wbesRtmIexFile'}
     #add options to browser
     opts.add_experimental_option('prefs', p)
     # click on the datepicker select button 
@@ -60,8 +60,8 @@ def wbes_Rtm_iex_import():
     # click on different download option dwnld
     browser.find_elements_by_id("dwnld")[0].click()
 
-    srcFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_REPORT_AUTOMATION\Dumps\wbesRtmIexFile'
-    destFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_REPORT_AUTOMATION\Dumps\wbesRtmIexFile\Archives'
+    srcFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_BROWSER_AUTOMATION\Dumps\wbesRtmIexFile'
+    destFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_BROWSER_AUTOMATION\Dumps\wbesRtmIexFile\Archives'
     revNum = getMaxRTMRevForDate(previousDateFormatted,13)
     destFileName = "Report-RTM_IEX-("+revNum+")-"
     moveFilesToArchive(srcFileLocation, destFileLocation, destFileName)

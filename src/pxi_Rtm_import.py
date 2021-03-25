@@ -10,7 +10,7 @@ opts = Options()
 
 def pxi_Rtm_import():
     # set download directory path
-    p = {'download.default_directory':r'C:\Users\dheer\Desktop\wrldc\RTM_REPORT_AUTOMATION\Dumps\pxiRtmFile'}
+    p = {'download.default_directory':r'C:\Users\dheer\Desktop\wrldc\RTM_BROWSER_AUTOMATION\Dumps\pxiRtmFile'}
     #add options to browser
     opts.add_experimental_option('prefs', p)
 
@@ -34,8 +34,8 @@ def pxi_Rtm_import():
     # csvDwnLd = browser.find_element_by_css_selector("dt-button buttons-csv buttons-html5")
     csvDwnLd = browser.find_elements_by_tag_name("span")
 
-    srcFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_REPORT_AUTOMATION\Dumps\pxiRtmFile'
-    destFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_REPORT_AUTOMATION\Dumps\pxiRtmFile\Archives'
+    srcFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_BROWSER_AUTOMATION\Dumps\pxiRtmFile'
+    destFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_BROWSER_AUTOMATION\Dumps\pxiRtmFile\Archives'
     destFileName = "DASMVPReport_"
     moveFilesToArchive(srcFileLocation, destFileLocation, destFileName)
     csvDwnLd[11].click()

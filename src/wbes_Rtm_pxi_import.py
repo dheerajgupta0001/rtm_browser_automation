@@ -14,7 +14,7 @@ opts = Options()
 
 def wbes_Rtm_pxi_import():
     # set download directory path
-    p = {'download.default_directory':r'C:\Users\dheer\Desktop\wrldc\RTM_REPORT_AUTOMATION\Dumps\wbesRtmPxiFile'}
+    p = {'download.default_directory':r'C:\Users\dheer\Desktop\wrldc\RTM_BROWSER_AUTOMATION\Dumps\wbesRtmPxiFile'}
     #add options to browser
     opts.add_experimental_option('prefs', p)
     # click on the datepicker select button 
@@ -70,8 +70,8 @@ def wbes_Rtm_pxi_import():
     # click on different download option dwnld
     browser.find_elements_by_id("dwnld")[0].click()
 
-    srcFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_REPORT_AUTOMATION\Dumps\wbesRtmPxiFile'
-    destFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_REPORT_AUTOMATION\Dumps\wbesRtmPxiFile\Archives'
+    srcFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_BROWSER_AUTOMATION\Dumps\wbesRtmPxiFile'
+    destFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_BROWSER_AUTOMATION\Dumps\wbesRtmPxiFile\Archives'
     revNum = getMaxRTMRevForDate(previousDateFormatted,12)
     destFileName = "Report-RTM_PXI-("+revNum+")-"
     moveFilesToArchive(srcFileLocation, destFileLocation, destFileName)

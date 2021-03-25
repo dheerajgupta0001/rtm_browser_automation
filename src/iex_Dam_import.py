@@ -11,7 +11,7 @@ opts = Options()
 
 def iex_Dam_import():
     # set download directory path
-    p = {'download.default_directory':r'C:\Users\dheer\Desktop\wrldc\RTM_REPORT_AUTOMATION\Dumps\iexDamFile'}
+    p = {'download.default_directory':r'C:\Users\dheer\Desktop\wrldc\RTM_BROWSER_AUTOMATION\Dumps\iexDamFile'}
     #add options to browser
     opts.add_experimental_option('prefs', p)
 
@@ -48,8 +48,8 @@ def iex_Dam_import():
     # click on different download option ctl00_InnerContent_reportViewer_ctl05_ctl04_ctl00_ButtonLink
     browser.find_elements_by_id("ctl00_InnerContent_reportViewer_ctl05_ctl04_ctl00_ButtonLink")[0].click()
 
-    srcFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_REPORT_AUTOMATION\Dumps\iexDamFile'
-    destFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_REPORT_AUTOMATION\Dumps\iexDamFile\Archives'
+    srcFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_BROWSER_AUTOMATION\Dumps\iexDamFile'
+    destFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_BROWSER_AUTOMATION\Dumps\iexDamFile\Archives'
     destFileName = "MarketMinute_"
     moveFilesToArchive(srcFileLocation, destFileLocation, destFileName)
     delay = 60 # seconds

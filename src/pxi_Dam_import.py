@@ -12,7 +12,7 @@ opts = Options()
 
 def pxi_Dam_import():
     # set download directory path
-    p = {'download.default_directory':r'C:\Users\dheer\Desktop\wrldc\RTM_REPORT_AUTOMATION\Dumps\pxiDamFile'}
+    p = {'download.default_directory':r'C:\Users\dheer\Desktop\wrldc\RTM_BROWSER_AUTOMATION\Dumps\pxiDamFile'}
     #add options to browser
     opts.add_experimental_option('prefs', p)
 
@@ -35,8 +35,8 @@ def pxi_Dam_import():
     # click on different download csv option button class =  "dt-button buttons-csv buttons-html5"
     csvDwnLd = browser.find_elements_by_tag_name("span")
 
-    srcFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_REPORT_AUTOMATION\Dumps\pxiDamFile'
-    destFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_REPORT_AUTOMATION\Dumps\pxiDamFile\Archives'
+    srcFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_BROWSER_AUTOMATION\Dumps\pxiDamFile'
+    destFileLocation = r'C:\Users\dheer\Desktop\wrldc\RTM_BROWSER_AUTOMATION\Dumps\pxiDamFile\Archives'
     destFileName = "DASMVPReport_"
     moveFilesToArchive(srcFileLocation, destFileLocation, destFileName)
     csvDwnLd[11].click()
