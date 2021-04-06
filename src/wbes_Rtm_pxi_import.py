@@ -80,7 +80,7 @@ def wbes_Rtm_pxi_import():
         myElem = WebDriverWait(browser, delay).until(EC.presence_of_element_located((By.LINK_TEXT, 'CSV')))
     except TimeoutException:
         print("Loading took too much time!")
-    browser.find_elements(By.LINK_TEXT,"CSV")[0].click()
+    browser.find_elements(By.LINK_TEXT,"Excel")[0].click()
     print("wbes RTM PXI fetch succesful")
 
     time.sleep(10)

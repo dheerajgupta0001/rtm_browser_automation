@@ -21,7 +21,7 @@ def iex_Rtm_import():
     # open the website "https://www.iexindia.com/marketdata/rtm_market_snapshot.aspx"
     browser.get('https://www.iexindia.com/marketdata/rtm_market_snapshot.aspx')
     # TEST WAIT UNTIL IN SELENIUM
-    delay = 60 # seconds
+    delay = 120 # seconds
     try:
         myElem = WebDriverWait(browser, delay).until(EC.presence_of_element_located((By.ID, 'ctl00_InnerContent_ddlPeriod')))
     except TimeoutException:
@@ -39,10 +39,10 @@ def iex_Rtm_import():
     dropdownLinks = []
     delay = 60 # seconds
     try:
-        myElem = WebDriverWait(browser, delay).until(EC.presence_of_element_located((By.ID, 'ctl00_InnerContent_reportViewer_ctl05_ctl04_ctl00_ButtonLink')))
+        myElem = WebDriverWait(browser, delay).until(EC.presence_of_element_located((By.ID, 'ctl00_InnerContent_reportViewer_ctl05_ctl04_ctl00_ButtonImg')))
     except TimeoutException:
         print("Loading took too much time!")
-    dropdownLinks = browser.find_elements_by_id("ctl00_InnerContent_reportViewer_ctl05_ctl04_ctl00_ButtonLink")
+    dropdownLinks = browser.find_elements_by_id("ctl00_InnerContent_reportViewer_ctl05_ctl04_ctl00_ButtonImg")
 
     # click on different download option button "ctl00_InnerContent_reportViewer_ctl05_ctl04_ctl00_ButtonLink"
     dropdownLinks[0].click()
