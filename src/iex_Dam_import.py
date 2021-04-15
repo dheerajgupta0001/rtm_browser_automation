@@ -16,7 +16,7 @@ def iex_Dam_import():
     opts.add_experimental_option('prefs', p)
 
     browser = Chrome(options=opts)
-    #maximize browser
+    # maximize browser
     browser.maximize_window()
     browser.get('https://www.iexindia.com/marketdata/market_snapshot.aspx')
     # TEST WAIT UNTIL IN SELENIUM
