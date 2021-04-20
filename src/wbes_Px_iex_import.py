@@ -6,6 +6,7 @@ from selenium.webdriver.support.ui import Select, WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium import webdriver
 import time
+import os
 import gettext
 import datetime as dt
 from utils.move_file_to_archive import moveFilesToArchive
@@ -75,3 +76,9 @@ def wbes_Px_iex_import():
 
     time.sleep(10)
     browser.close()
+    os.chdir(srcFileLocation)
+    for filename in os.listdir(os.getcwd()):
+        if filename.endswith(".xlsx"):
+            y=filename
+            x=filename.replace('('+revNum+')','(0)')
+            os.rename(os.path.join(srcFileLocation, y), os.path.join(srcFileLocation, x))

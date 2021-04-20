@@ -26,17 +26,17 @@ except Exception as ex:
     print(ex)
     print("An exception occurred")
 
-try:
-    pxi_Dam_import()
-except Exception as ex:
-    print(ex)
-    print("An exception occurred")
+# try:
+#     pxi_Dam_import()
+# except Exception as ex:
+#     print(ex)
+#     print("An exception occurred")
 
-try:
-    pxi_Rtm_import()
-except Exception as ex:
-    print(ex)
-    print("An exception occurred")
+# try:
+#     pxi_Rtm_import()
+# except Exception as ex:
+#     print(ex)
+#     print("An exception occurred")
 
 try:
     wbes_Rtm_iex_import()
